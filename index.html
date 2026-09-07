@@ -1296,54 +1296,66 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // ============================================================
-        // GAME DATA - ADD YOUR LINKS HERE!
-        // ============================================================
-        const gameData = {
-            featured: [
-                { 
-                    title: "Your Featured Game",  // ← CHANGE THIS
-                    desc: "Your game description here",  // ← CHANGE THIS
-                    img: "your-image.png",  // ← CHANGE THIS
-                    video: "https://www.youtube.com/watch?v=UIdOPWIW_I8",  // ← YOUR YOUTUBE LINK
-                    tags: ["Unity", "C#", "Genre"],  // ← CHANGE TAGS
-                    platforms: ["Google Play", "Steam"],  // ← CHANGE PLATFORMS
-                    links: { 
-                        "Play Now": "https://your-game-link.com",  // ← ADD YOUR DOWNLOAD LINK
-                        "Trailer": "https://www.youtube.com/watch?v=UIdOPWIW_I8",  // ← ADD YOUR TRAILER
-                        "Website": "https://your-website.com"  // ← ADD MORE LINKS
-                    }
-                }
-            ],
-            released: [
-                { 
-                    title: "Your Released Game",  // ← CHANGE THIS
-                    desc: "Description of your released game",  // ← CHANGE THIS
-                    img: "game-icon.png",  // ← CHANGE THIS
-                    video: "https://www.youtube.com/watch?v=UIdOPWIW_I8",  // ← YOUR YOUTUBE LINK
-                    tags: ["Unity", "C#"],  // ← CHANGE TAGS
-                    platforms: ["Google Play"],  // ← CHANGE PLATFORMS
-                    links: { 
-                        "Google Play": "https://play.google.com/store/apps/details?id=YOUR_ID",  // ← ADD YOUR LINK
-                        "itch.io": "https://yourname.itch.io/yourgame",  // ← ADD YOUR LINK
-                        "Trailer": "https://www.youtube.com/watch?v=UIdOPWIW_I8"  // ← ADD YOUR LINK
-                    }
-                }
-            ],
-            upcoming: [
-                { 
-                    title: "Your Upcoming Project",  // ← CHANGE THIS
-                    desc: "Coming soon description",  // ← CHANGE THIS
-                    img: "project-icon.png",  // ← CHANGE THIS
-                    video: "https://www.youtube.com/watch?v=UIdOPWIW_I8",  // ← YOUR YOUTUBE LINK
-                    tags: ["Unity", "C#"],  // ← CHANGE TAGS
-                    platforms: ["TBA"],  // ← CHANGE PLATFORMS
-                    links: {
-                        "Wishlist": "https://store.steampowered.com/app/YOUR_ID"  // ← ADD WISHLIST LINK
-                    }
-                }
-            ]
-        };
+       // ============================================================
+// 🎮 YOUR PORTFOLIO - EDIT EVERYTHING HERE! 🎮
+// ============================================================
+// Just fill in the blanks below with your actual work!
+// Copy and paste the template to add more games
+
+const gameData = {
+    // ⭐ FEATURED PROJECTS (Shown first at the top)
+    featured: [
+        { 
+            title: "My Amazing Game",              // ← Game name
+            desc: "An epic adventure game where you explore magical worlds and solve puzzles!",  // ← Short description
+            img: "mygame-icon.png",                 // ← Your game icon/image file name
+            video: "https://www.youtube.com/watch?v=UIdOPWIW_I8",  // ← YouTube video link
+            tags: ["Unity", "C#", "Adventure"],    // ← Technologies and genres
+            platforms: ["Google Play", "Steam"],    // ← Where it's available
+            links: {                                // ← Add your download/play links
+                "Play Now": "https://play.google.com/store/apps/details?id=YOUR_ID",
+                "Watch Trailer": "https://www.youtube.com/watch?v=UIdOPWIW_I8",
+                "Website": "https://yourgame.com"
+            }
+        },
+        // Add another featured game here by copying the { } block above
+    ],
+    
+    // ✅ RELEASED GAMES (Games that are out now)
+    released: [
+        { 
+            title: "My Released Game",             // ← Game name
+            desc: "A fun puzzle game that challenges your brain!",  // ← Description
+            img: "released-game.png",               // ← Game icon
+            video: "https://www.youtube.com/watch?v=UIdOPWIW_I8",  // ← YouTube video
+            tags: ["Unity", "Puzzle"],             // ← Tags
+            platforms: ["Google Play", "itch.io"],  // ← Platforms
+            links: {                                // ← Download links
+                "Google Play": "https://play.google.com/store/apps/details?id=YOUR_ID",
+                "itch.io": "https://yourname.itch.io/yourgame",
+                "Trailer": "https://www.youtube.com/watch?v=UIdOPWIW_I8"
+            }
+        },
+        // Add more released games here...
+    ],
+    
+    // 🚧 UPCOMING PROJECTS (Games in development)
+    upcoming: [
+        { 
+            title: "My Upcoming Game",             // ← Game name
+            desc: "Coming soon! A cozy farming sim with magical creatures.",  // ← Description
+            img: "upcoming-game.png",               // ← Game icon
+            video: "https://www.youtube.com/watch?v=UIdOPWIW_I8",  // ← YouTube teaser
+            tags: ["Unity", "Simulation"],         // ← Tags
+            platforms: ["TBA"],                     // ← To be announced
+            links: {                                // ← Add wishlist or teaser links
+                "Wishlist": "https://store.steampowered.com/app/YOUR_ID",
+                "Dev Blog": "https://yourblog.com"
+            }
+        },
+        // Add more upcoming games here...
+    ]
+};
 
         function createCard(game, isFeatured = false) {
             const videoId = game.video.includes('youtube.com/watch') ? game.video.split('v=')[1] : null;
